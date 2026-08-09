@@ -1,0 +1,6 @@
+{
+  "name": "Nyumba",
+  "description": "Kenya's premier house hunting platform with full 47 county location support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

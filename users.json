@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Admin User",
+    "username": "admin",
+    "email": "admin@nyumba.com",
+    "phone": "+254700000000",
+    "password": "password123",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "name": "John Landlord",
+    "username": "landlord",
+    "email": "landlord@nyumba.com",
+    "phone": "+254712345678",
+    "password": "password123",
+    "role": "landlord"
+  },
+  {
+    "id": 3,
+    "name": "Jane Tenant",
+    "username": "tenant",
+    "email": "tenant@nyumba.com",
+    "phone": "+254798765432",
+    "password": "password123",
+    "role": "tenant"
+  }
+]
