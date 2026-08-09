@@ -337,6 +337,105 @@ export const getFooter = () => `
     </footer>
 `;
 
+const popularNeighborhoodsRow1 = [
+    { name: "Westlands", county: "Nairobi" },
+    { name: "Kilimani", county: "Nairobi" },
+    { name: "Karen", county: "Nairobi" },
+    { name: "Kileleshwa", county: "Nairobi" },
+    { name: "Lavington", county: "Nairobi" },
+    { name: "Parklands", county: "Nairobi" },
+    { name: "South C", county: "Nairobi" },
+    { name: "Roysambu", county: "Nairobi" },
+    { name: "Ruiru", county: "Kiambu" },
+    { name: "Thika", county: "Kiambu" },
+    { name: "Juja", county: "Kiambu" },
+    { name: "Kahawa Sukari", county: "Kiambu" },
+    { name: "Kikuyu", county: "Kiambu" },
+    { name: "Syokimau", county: "Machakos" },
+    { name: "Athi River", county: "Machakos" },
+    { name: "Mlolongo", county: "Machakos" },
+    { name: "Ongata Rongai", county: "Kajiado" },
+    { name: "Kitengela", county: "Kajiado" },
+    { name: "Ngong", county: "Kajiado" },
+    { name: "Nyali", county: "Mombasa" },
+    { name: "Bamburi", county: "Mombasa" },
+    { name: "Tudor", county: "Mombasa" },
+    { name: "Diani", county: "Kwale" },
+    { name: "Mtwapa", county: "Kilifi" },
+    { name: "Malindi", county: "Kilifi" },
+    { name: "Section 58", county: "Nakuru" },
+    { name: "Milimani", county: "Nakuru" },
+    { name: "Naivasha", county: "Nakuru" },
+    { name: "Elgon View", county: "Uasin Gishu" },
+    { name: "Kapsoya", county: "Uasin Gishu" }
+];
+
+const popularNeighborhoodsRow2 = [
+    { name: "Milimani", county: "Kisumu" },
+    { name: "Migosi", county: "Kisumu" },
+    { name: "Riat Hills", county: "Kisumu" },
+    { name: "Kondele", county: "Kisumu" },
+    { name: "Nanyuki", county: "Laikipia" },
+    { name: "Thingithu", county: "Laikipia" },
+    { name: "Ruring'u", county: "Nyeri" },
+    { name: "Karatina", county: "Nyeri" },
+    { name: "Othaya", county: "Nyeri" },
+    { name: "Kerugoya", county: "Kirinyaga" },
+    { name: "Sagana", county: "Kirinyaga" },
+    { name: "Kenol", county: "Murang'a" },
+    { name: "Makutano", county: "Meru" },
+    { name: "Timau", county: "Meru" },
+    { name: "Chuka", county: "Tharaka-Nithi" },
+    { name: "Embu Town", county: "Embu" },
+    { name: "Milimani", county: "Kisii" },
+    { name: "Jogoo Estate", county: "Kisii" },
+    { name: "Kakamega Town", county: "Kakamega" },
+    { name: "Milimani Kakamega", county: "Kakamega" },
+    { name: "Bungoma Town", county: "Bungoma" },
+    { name: "Busia Town", county: "Busia" },
+    { name: "Siaya Town", county: "Siaya" },
+    { name: "Bondo", county: "Siaya" },
+    { name: "Homa Bay Town", county: "Homa Bay" },
+    { name: "Migori Town", county: "Migori" },
+    { name: "Kitale Township", county: "Trans Nzoia" },
+    { name: "Kericho Town", county: "Kericho" },
+    { name: "Bomet Town", county: "Bomet" },
+    { name: "Narok Town", county: "Narok" }
+];
+
+const popularNeighborhoodsRow3 = [
+    { name: "Spring Valley", county: "Nairobi" },
+    { name: "Kasarani", county: "Nairobi" },
+    { name: "Utawala", county: "Nairobi" },
+    { name: "Donholm", county: "Nairobi" },
+    { name: "Imara Daima", county: "Nairobi" },
+    { name: "Langata", county: "Nairobi" },
+    { name: "Woodley", county: "Nairobi" },
+    { name: "Eastleigh", county: "Nairobi" },
+    { name: "Garden Estate", county: "Nairobi" },
+    { name: "Buruburu", county: "Nairobi" },
+    { name: "Kinoo", county: "Kiambu" },
+    { name: "Lower Kabete", county: "Kiambu" },
+    { name: "Membley", county: "Kiambu" },
+    { name: "Vipingo Ridge", county: "Kilifi" },
+    { name: "Watamu", county: "Kilifi" },
+    { name: "Shela Beach", county: "Lamu" },
+    { name: "Kimumu", county: "Uasin Gishu" },
+    { name: "Langas", county: "Uasin Gishu" },
+    { name: "Kapsabet", county: "Nandi" },
+    { name: "Iten", county: "Elgeyo-Marakwet" },
+    { name: "Kabarnet", county: "Baringo" },
+    { name: "Ol Kalou", county: "Nyandarua" },
+    { name: "Wote", county: "Makueni" },
+    { name: "Emali", county: "Makueni" },
+    { name: "Kitui Town", county: "Kitui" },
+    { name: "Garissa Township", county: "Garissa" },
+    { name: "Wajir Town", county: "Wajir" },
+    { name: "Mandera Town", county: "Mandera" },
+    { name: "Lodwar", county: "Turkana" },
+    { name: "Maralal", county: "Samburu" }
+];
+
 export const getLandingHTML = (featuredHouses: any[] = []) => `
 <!DOCTYPE html>
 <html lang="en">
@@ -347,10 +446,37 @@ export const getLandingHTML = (featuredHouses: any[] = []) => `
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #09090b; color: white; }
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .marquee-container { overflow: hidden; white-space: nowrap; position: relative; }
-        .marquee-content { display: inline-block; animation: marquee 40s linear infinite; }
+        body { font-family: 'Inter', sans-serif; background-color: #09090b; color: white; overflow-x: hidden; }
+        @keyframes marquee-left {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marquee-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+        .animate-marquee-left {
+            display: flex;
+            width: max-content;
+            animation: marquee-left 65s linear infinite;
+            will-change: transform;
+        }
+        .animate-marquee-right {
+            display: flex;
+            width: max-content;
+            animation: marquee-right 70s linear infinite;
+            will-change: transform;
+        }
+        .marquee-row:hover .animate-marquee-left,
+        .marquee-row:hover .animate-marquee-right {
+            animation-play-state: paused;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-marquee-left,
+            .animate-marquee-right {
+                animation: none !important;
+            }
+        }
         .bg-mesh {
             background-image: 
                 radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.3) 0px, transparent 50%),
@@ -455,24 +581,70 @@ export const getLandingHTML = (featuredHouses: any[] = []) => `
         </div>
     </section>
 
-    <!-- Neighborhoods -->
-    <section class="pb-32">
+    <!-- Popular Neighborhoods Section -->
+    <section class="py-24 overflow-hidden relative border-t border-white/5 bg-black/40">
         <div class="max-w-7xl mx-auto px-6 mb-12 text-center">
-            <h3 class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-black">Popular Neighborhoods</h3>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/10 text-[10px] font-black tracking-widest uppercase text-blue-400 mb-4">
+                <svg class="w-3.5 h-3.5 text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Explore 47 Counties
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-white mb-4">Popular Neighborhoods</h2>
+            <p class="text-zinc-400 max-w-xl mx-auto text-sm md:text-base font-medium">Discover top residential sanctuaries across Kenya's premier counties, towns, and estates.</p>
         </div>
-        <div class="marquee-container">
-            <div class="marquee-content flex gap-4 px-4">
-                <div class="flex gap-4">
-                    <a href="/explore?search=Westlands" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Westlands</a>
-                    <a href="/explore?search=Kilimani" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Kilimani</a>
-                    <a href="/explore?search=Karen" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Karen</a>
-                    <a href="/explore?search=Thika" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Thika</a>
+
+        <div class="relative w-full overflow-hidden space-y-4">
+            <!-- Left and Right Gradient Fades for Infinite Edge Effect -->
+            <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-r from-[#09090b] to-transparent z-10"></div>
+            <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-[#09090b] to-transparent z-10"></div>
+
+            <!-- Row 1: Leftward Scroll -->
+            <div class="marquee-row overflow-hidden flex">
+                <div class="animate-marquee-left flex gap-4 px-2">
+                    ${[...popularNeighborhoodsRow1, ...popularNeighborhoodsRow1].map(loc => `
+                        <a href="/explore?search=${encodeURIComponent(loc.name)}" class="group flex-shrink-0 flex items-center gap-3 px-5 py-3.5 bg-zinc-900/80 border border-white/10 hover:border-blue-500/50 rounded-2xl hover:bg-zinc-800/90 transition-all shadow-lg hover:shadow-blue-500/10 backdrop-blur-md">
+                            <div class="w-8 h-8 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-black text-white group-hover:text-blue-400 transition-colors whitespace-nowrap">${loc.name}</div>
+                                <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">${loc.county} County</div>
+                            </div>
+                        </a>
+                    `).join('')}
                 </div>
-                <div class="flex gap-4">
-                    <a href="/explore?search=Westlands" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Westlands</a>
-                    <a href="/explore?search=Kilimani" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Kilimani</a>
-                    <a href="/explore?search=Karen" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Karen</a>
-                    <a href="/explore?search=Thika" class="px-10 py-5 bg-white/5 border border-white/10 rounded-3xl hover:bg-white hover:text-black transition-all font-black text-lg backdrop-blur-sm text-white">Thika</a>
+            </div>
+
+            <!-- Row 2: Rightward Scroll -->
+            <div class="marquee-row overflow-hidden flex">
+                <div class="animate-marquee-right flex gap-4 px-2">
+                    ${[...popularNeighborhoodsRow2, ...popularNeighborhoodsRow2].map(loc => `
+                        <a href="/explore?search=${encodeURIComponent(loc.name)}" class="group flex-shrink-0 flex items-center gap-3 px-5 py-3.5 bg-zinc-900/80 border border-white/10 hover:border-cyan-500/50 rounded-2xl hover:bg-zinc-800/90 transition-all shadow-lg hover:shadow-cyan-500/10 backdrop-blur-md">
+                            <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-black text-white group-hover:text-cyan-400 transition-colors whitespace-nowrap">${loc.name}</div>
+                                <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">${loc.county} County</div>
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- Row 3: Leftward Scroll -->
+            <div class="marquee-row overflow-hidden flex">
+                <div class="animate-marquee-left flex gap-4 px-2">
+                    ${[...popularNeighborhoodsRow3, ...popularNeighborhoodsRow3].map(loc => `
+                        <a href="/explore?search=${encodeURIComponent(loc.name)}" class="group flex-shrink-0 flex items-center gap-3 px-5 py-3.5 bg-zinc-900/80 border border-white/10 hover:border-emerald-500/50 rounded-2xl hover:bg-zinc-800/90 transition-all shadow-lg hover:shadow-emerald-500/10 backdrop-blur-md">
+                            <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-black text-white group-hover:text-emerald-400 transition-colors whitespace-nowrap">${loc.name}</div>
+                                <div class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">${loc.county} County</div>
+                            </div>
+                        </a>
+                    `).join('')}
                 </div>
             </div>
         </div>
